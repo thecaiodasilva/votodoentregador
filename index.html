@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>o seu voto importa</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#009C3B;--verde-esc:#006B28;--amarelo:#FFDF00;--azul:#002776;--fundo:#FFFFFF;--texto:#14213D;--card:#F1F7F3;--sombra:rgba(0,39,118,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fundo:#0B1630;--texto:#F4F7FF;--card:#13264F;--sombra:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--fundo:#0B1630;--texto:#F4F7FF;--card:#13264F;--sombra:rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--fundo);color:var(--texto);font-family:'Nunito',system-ui,sans-serif;font-size:19px;line-height:1.5;font-weight:600}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.1;margin:0}
+.hero{background:var(--verde);color:#fff;padding:40px 20px 84px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:50%;bottom:-60px;width:150%;height:110px;background:var(--amarelo);transform:translateX(-50%) rotate(-3deg)}
+.wrap{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.2rem,9vw,3.4rem);font-weight:800}
+.hero p{font-size:1.2rem;margin:12px 0 0;max-width:28ch}
+main{max-width:620px;margin:0 auto;padding:0 20px 24px}
+.resumo{margin-top:-30px;position:relative;z-index:2;background:var(--azul);color:#fff;border-radius:22px;padding:18px;box-shadow:0 8px 24px var(--sombra)}
+.resumo h2{font-size:1.4rem;color:var(--amarelo);margin-bottom:10px}
+.resumo ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.resumo li{display:flex;gap:10px;align-items:center;font-weight:800}
+.resumo li b{font-size:1.5rem}
+nav{display:flex;gap:8px;overflow-x:auto;padding:18px 0 6px;scrollbar-width:none}
+nav a{flex:none;text-decoration:none;color:var(--azul);background:var(--amarelo);font-family:'Baloo 2',sans-serif;font-weight:700;padding:6px 16px;border-radius:999px;min-height:44px;display:flex;align-items:center}
+nav a:focus-visible,summary:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+section{margin-top:34px}
+h2.t{font-size:1.9rem;color:var(--verde-esc)}
+a{flex:none;text-decoration:none;color:var(--azul);background:var(--amarelo);font-family:'Baloo 2',sans-serif;font-weight:700;padding:6px 16px;border-radius:999px;min-height:44px;display:flex;align-items:center; text-align: center;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2.t{color:var(--amarelo)}}
+:root[data-theme="dark"] h2.t{color:var(--amarelo)}
+.card{background:var(--card);border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 4px 14px var(--sombra);border-top:6px solid var(--verde)}
+.card:nth-of-type(even){border-top-color:var(--amarelo)}
+.top{display:flex;gap:12px;align-items:center}
+.ico{font-size:2.4rem;flex:none}
+.card h3{font-size:1.45rem}
+.card p{margin:10px 0 0}
+.ganho{margin-top:12px;background:var(--verde);color:#fff;border-radius:14px;padding:10px 14px;font-weight:800}
+.ganho::before{content:"✅ Você ganha: "}
+.sel{display:inline-block;font-size:.8rem;font-weight:800;border-radius:999px;padding:2px 10px;margin-top:10px}
+.ja{background:var(--verde);color:#fff}
+.prom{background:var(--amarelo);color:#14213D}
+.num{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.3em;color:var(--azul)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num{color:var(--amarelo)}}
+:root[data-theme="dark"] .num{color:var(--amarelo)}
+details{margin-top:12px}
+summary{cursor:pointer;font-weight:800;color:var(--azul);min-height:44px;display:flex;align-items:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) summary{color:var(--amarelo)}}
+:root[data-theme="dark"] summary{color:var(--amarelo)}
+.fim{margin-top:36px;background:var(--amarelo);color:#14213D;border-radius:20px;padding:20px;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:1.4rem;text-align:center}
+footer{margin-top:30px;background:var(--azul);color:#fff;text-align:center;padding:26px 20px calc(26px + env(safe-area-inset-bottom,0px));font-weight:800}
+footer span{display:block;font-weight:600;font-size:.9rem;margin-top:6px;opacity:.85}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div style="font-size:3rem" aria-hidden="true">🏍️</div>
+  <h1>Eu sou entregador e voto 13 pq?</h1>
+  <p>Veja o que nós entregadores ganhamos e podemos continuar ganhado com do governo Lula se ele continuar o seu governo!!!</p>
+</div></header>
+
+<main>
+  <div class="resumo">
+    <h2>Resumo em 10 segundos</h2>
+    <ul>
+      <li><b>🏍️</b> Moto com juros menores</li>
+      <li><b>💵</b> Pagamento mínimo por corrida</li>
+      <li><b>🧾</b> Recibo que mostra quanto é seu</li>
+      <li><b>🚻</b> Pontos de descanso com banheiro</li>
+    </ul>
+  </div>
+
+  <nav aria-label="Ir para">
+    <a href="#dinheiro">💰 Dinheiro</a><a href="#direitos">📜 Direitos</a><a href="#cuidado">🏥 Cuidado</a><a href="#voz">🗣️ Sua voz</a>
+  </nav>
+
+  <section id="dinheiro">
+    <h2 class="t">💰 Mais dinheiro no bolso</h2>
+
+    <article class="card">
+      <div class="top"><span class="ico">🏍️</span><h3>Crédito para sua moto</h3></div>
+      <p>Você pode pegar de <span class="num">R$ 10 mil</span> a <span class="num">R$ 20 mil</span> com juros menores.</p>
+      <div class="ganho">sua própria ferramenta de trabalho, pagando menos juros</div>
+      <span class="sel ja">Já começou</span>
+      <details><summary>Como funciona?</summary><p>Um fundo do governo ajuda a garantir o empréstimo. Isso serve para quem tem mais dificuldade de conseguir crédito.</p></details>
+    </article>
+
+    <article class="card">
+      <div class="top"><span class="ico">🔧</span><h3>Veículo novo e mais seguro</h3></div>
+      <p>Um plano de <span class="num">R$ 30 bilhões</span> para renovar a frota de entregadores, motoristas de app e taxistas.</p>
+      <div class="ganho">mais segurança na rua e mais produtividade</div>
+      <span class="sel ja">Já começou</span>
+    </article>
+  </section>
+
+  <section id="direitos">
+    <h2 class="t">📜 Mais direitos</h2>
+    <p>O governo quer regulamentar o trabalho por aplicativo, com a participação da categoria.</p>
+
+    <article class="card">
+      <div class="top"><span class="ico">💵</span><h3>Pagamento mínimo</h3></div>
+      <p>A proposta é um valor mínimo por entrega, que pode chegar a <span class="num">R$ 10</span> por corrida.</p>
+      <div class="ganho">ganho maior que o de hoje em muitas corridas</div>
+      <span class="sel prom">Em discussão</span>
+    </article>
+
+    <article class="card">
+      <div class="top"><span class="ico">🧾</span><h3>Recibo claro</h3></div>
+      <p>O app teria que mostrar quanto o cliente pagou, quanto a empresa fica e quanto vai para você.</p>
+      <div class="ganho">saber exatamente quanto é seu</div>
+      <span class="sel prom">Em discussão</span>
+    </article>
+
+    <article class="card">
+      <div class="top"><span class="ico">🛡️</span><h3>Aposentadoria e proteção</h3></div>
+      <p>O governo defende que o app pague a contribuição da Previdência.</p>
+      <div class="ganho">amparo se você ficar doente ou sofrer acidente</div>
+      <span class="sel prom">Em discussão</span>
+    </article>
+  </section>
+
+  <section id="cuidado">
+    <h2 class="t">🏥 Mais cuidado agora</h2>
+    <p>Estas mudanças não dependem do Congresso.</p>
+
+    <article class="card">
+      <div class="top"><span class="ico">🚻</span><h3>Parada Certa</h3></div>
+      <p><span class="num">100 pontos</span> de apoio no país, com banheiro, água potável, internet, vestiário e área de descanso.</p>
+      <div class="ganho">descansar, beber água e carregar o celular com conforto</div>
+      <span class="sel ja">Já começou</span>
+    </article>
+
+    <article class="card">
+      <div class="top"><span class="ico">⛑️</span><h3>Acidente é acidente de trabalho</h3></div>
+      <p>Acidentes com entregadores passam a ser registrados no SUS como acidentes de trabalho.</p>
+      <div class="ganho">o risco da sua profissão passa a ser reconhecido</div>
+      <span class="sel ja">Já começou</span>
+    </article>
+
+    <article class="card">
+      <div class="top"><span class="ico">✅</span><h3>Fim da "placa vermelha"</h3></div>
+      <p>Acabou a exigência de curso obrigatório e de ter 21 anos ou mais.</p>
+      <div class="ganho">menos burocracia e menos risco de moto apreendida</div>
+      <span class="sel ja">Já começou</span>
+    </article>
+  </section>
+
+  <section id="voz">
+    <h2 class="t">🗣️ Você é ouvido</h2>
+    <article class="card">
+      <div class="top"><span class="ico">🤝</span><h3>Comitê de conversa</h3></div>
+      <p>O governo Lula criou um Comitê Interministerial de Monitoramento. É um espaço permanente para conversar com os trabalhadores.</p>
+      <div class="ganho">um canal direto para a sua categoria</div>
+      <span class="sel ja">Já começou</span>
+      <details><summary>E antes?</summary><p>Esse espaço não existia. O governo anterior foi criticado por tratar o tema com "encenação" e passeios de moto.</p></details>
+    </article>
+  </section>
+
+  <div class="fim">A escolha é sua. MAS PODEMOS PERDER TUDO ISSO SE O LULA NÃO FOR ELEITO!!! 🇧🇷</div>
+</main>
+<footer> Brasil melhor para os Entregadores<span>Quer saber mais sobre as conquistas do povo brasileiro no goverveno do Lula? É só <a href="https://www.instagram.com/reel/DSne-gJE7Bd/">CLICAR AQUI!!! </a>
+</span></footer>
+</body>
+</html>
